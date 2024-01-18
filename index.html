@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .image {
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+        text-align: center;
+    }
+    .cards{
+        text-align: center;
+        border: 2px solid black;
+        width: 300px;
+    }
+</style>
+
+<body>
+    <div class="cards">
+        <div class="iageid">
+            <img id="imageid" src="R.png" alt="">
+        </div>
+        <div class="opt">
+            <select name="" id="mobile">
+            <option value="" disabled selected>Categories</option>
+            <option value="iphone">iphone</option>
+            <option value="samsung">samsung</option>
+        </select>
+        </div>
+        <div class="color">
+            <select name="" id="color">
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="white">white</option>
+        </select>
+        </div>
+        <button onclick="myfun()">Submit</button>
+    </div>
+</body>
+    <script>
+        function myfyn() {
+            var mob = document.getElementById("mobile").value;
+            var color = document.getComputedStyle("color").value;
+            if (mob=="iphone"&&color=="red") {
+                document.getElementById("imageid").src = "iphonered.jpg"
+            }else if(mobile=="iphone"&&color=="blue") {
+                document.getElementById("imageid").src = "iphoneblue.jpg"
+            }else if(mobile=="iphone"&&color=="white"){
+                document.getElementById("imageid").src = "iphone white.jpg"
+            }else if(mobile=="samsung"&&color=="red") {
+                document.getElementById("imageid").src = "samsung red.jpg"
+            }else if(mobile=="samsung"&&color=="blue") {
+                document.getElementById("imageid").src = "samsungblue.jpg"
+            }else if(mobile=="samsung"&&color=="white") {
+                document.getElementById("imageid").src = "samsung white.jpg"
+            }else{
+                alert("none feild");
+            }
+        }
+    </script>
+</html>
